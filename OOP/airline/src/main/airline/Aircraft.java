@@ -1,14 +1,15 @@
-package com.company;
+package airline;
 
-abstract class Aircraft implements Comparable<Aircraft>{
+public abstract class Aircraft implements Comparable<Aircraft>{
     private int payload;
     private int rangeOfFlight;
     private int fuel;
-
-    public Aircraft(int payload, int rangeOfFlight, int fuel) {
+    private String name;
+    public Aircraft(String name, int payload, int rangeOfFlight, int fuel) {
         this.payload = payload;
         this.rangeOfFlight = rangeOfFlight;
         this.fuel = fuel;
+        this.name = name;
     }
 
     public int getPayload() {
@@ -16,9 +17,7 @@ abstract class Aircraft implements Comparable<Aircraft>{
     }
 
     public void setPayload(int payload) {
-        if (payload > 0) {
-            this.payload = payload;
-        }
+        this.payload = payload;
     }
 
     public int getRangeOfFlight() {
@@ -40,5 +39,16 @@ abstract class Aircraft implements Comparable<Aircraft>{
     @Override
     public int compareTo(Aircraft aircraft) {
         return this.rangeOfFlight - aircraft.rangeOfFlight;
+    }
+
+    @Override
+    public String toString() {
+        return "Aircraft{" +
+                "name='" + name +
+                ", payload=" + payload +
+                ", rangeOfFlight=" + rangeOfFlight +
+                ", fuel=" + fuel +
+                '\'' +
+                '}';
     }
 }

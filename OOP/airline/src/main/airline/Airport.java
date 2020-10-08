@@ -1,4 +1,4 @@
-package com.company;
+package airline;
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ public class Airport {
     public void addAircraft(Aircraft aircraft) {
         aircrafts.add(aircraft);
     }
-    public void sortByRangeOfFlight() {
+    public void sortAircraftsByRangeOfFlight() {
         Collections.sort(aircrafts);
     }
     public List<Aircraft> getAircraftsByFuelRange(int lowerBound, int higherBound) {
@@ -24,5 +24,11 @@ public class Airport {
             }
         }
         return aircraftsInRange;
+    }
+    public void printAircrafts() {
+        System.out.println(aircrafts);
+    }
+    public List<Aircraft> getAllAircrafts() {
+        return aircrafts;
     }
 }
