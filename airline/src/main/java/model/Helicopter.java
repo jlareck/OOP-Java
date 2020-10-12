@@ -12,6 +12,7 @@ public class Helicopter extends Aircraft {
                 ", payload=" + getPayload() +
                 ", rangeOfFlight=" + getRangeOfFlight() +
                 ", fuel=" + getFuel() +
+                ", capacity=" + getCapacity() +
                 '\'' +
                 '}';
     }

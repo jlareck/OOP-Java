@@ -13,6 +13,7 @@ public class Airplane extends Aircraft{
                 ", payload=" + getPayload() +
                 ", rangeOfFlight=" + getRangeOfFlight() +
                 ", fuel=" + getFuel() +
+                ", capacity=" + getCapacity() +
                 '\'' +
                 '}';
     }
