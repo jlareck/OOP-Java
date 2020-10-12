@@ -35,6 +35,7 @@ class UserInterface {
         }
 
     }
+
     private void printMenu(){
         System.out.println("Hi, welcome to the airport. Choose the action:\n" +
                 "1. Create the Airplane \n" +
@@ -44,6 +45,7 @@ class UserInterface {
                 "5. Find aircrafts by fuel range\n" +
                 "6. Exit");
     }
+
     private void commandExecution(int command) {
         switch (command) {
             case 1: {
@@ -79,6 +81,7 @@ class UserInterface {
 
         }
     }
+
     private Aircraft createAircraft(AircraftType type) {
         Scanner inputString = new Scanner(System.in);
         System.out.println("Choose a name for your airplane");

@@ -33,5 +33,6 @@ class AirportTest {
         expecteFoundAircrafts.add(airplaneB);
         assertEquals(airport.getAircraftsByFuelRange(50, 150), expecteFoundAircrafts);
 
+        assertEquals(airport.getTotalPayload(),40);
     }
 }

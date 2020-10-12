@@ -7,16 +7,20 @@ import java.util.ArrayList;
 public class Airport {
     private List<Aircraft> aircrafts;
     private String name;
+
     public Airport(String name) {
         aircrafts = new ArrayList<>();
         this.name = name;
     }
+
     public void addAircraft(Aircraft aircraft) {
         aircrafts.add(aircraft);
     }
+
     public void sortAircraftsByRangeOfFlight() {
         Collections.sort(aircrafts);
     }
+
     public List<Aircraft> getAircraftsByFuelRange(int lowerBound, int upperBound) {
         List<Aircraft> aircraftsInRange = new ArrayList<>();
         for (Aircraft aircraft: aircrafts) {
@@ -26,10 +30,19 @@ public class Airport {
         }
         return aircraftsInRange;
     }
+
     public void printAircrafts() {
         System.out.println(aircrafts);
     }
+
     public List<Aircraft> getAllAircrafts() {
         return new ArrayList<>(aircrafts);
+    }
+    public int getTotalPayload() {
+        int total = 0;
+        for (int i = 0; i < aircrafts.size(); i++) {
+            total += aircrafts.get(i).getPayload();
+        }
+        return total;
     }
 }

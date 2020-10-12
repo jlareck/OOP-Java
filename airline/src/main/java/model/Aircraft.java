@@ -21,7 +21,6 @@ public abstract class Aircraft implements Comparable<Aircraft>{
         this.name = name;
     }
 
-
     public int getPayload() {
         return payload;
     }
