@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class AirplaneTest {
     @Test
     void testAirplane(){
-        Aircraft airplane = new Airplane("airplane",10,20, 30);
+        Aircraft airplane = new Airplane("airplane",10,20, 30,500);
         assertEquals(airplane.getFuel(), 30);
         assertEquals(airplane.getPayload(), 10);
         assertEquals(airplane.getRangeOfFlight(), 20);

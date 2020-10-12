@@ -8,14 +8,14 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AirportTest {
+class AirlineTest {
     @Test
-    void testAirport() {
-        Airport airport = new Airport("airport");
-        Aircraft airplaneA = new Airplane("A", 10,20,20);
-        Aircraft airplaneB = new Airplane("B", 10,100,100);
-        Aircraft airplaneC = new Airplane("C", 10,70,70);
-        Aircraft airplaneD = new Airplane("A", 10,10,30);
+    void testAirline() {
+        Airline airport = new Airline("airport");
+        Aircraft airplaneA = new Airplane("A", 10,20,20,500);
+        Aircraft airplaneB = new Airplane("B", 10,100,100,500);
+        Aircraft airplaneC = new Airplane("C", 10,70,70, 500);
+        Aircraft airplaneD = new Airplane("A", 10,10,30, 500);
 
         airport.addAircraft(airplaneA);
         airport.addAircraft(airplaneB);
@@ -34,5 +34,7 @@ class AirportTest {
         assertEquals(airport.getAircraftsByFuelRange(50, 150), expecteFoundAircrafts);
 
         assertEquals(airport.getTotalPayload(),40);
+
+        assertEquals(airport.getTotalCapacity(), 2000);
     }
 }
