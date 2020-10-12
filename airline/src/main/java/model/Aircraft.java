@@ -4,13 +4,15 @@ public abstract class Aircraft implements Comparable<Aircraft>{
     private int payload;
     private int rangeOfFlight;
     private int fuel;
+    private int capacity;
     private String name;
 
-    public Aircraft(String name, int payload, int rangeOfFlight, int fuel) {
+    public Aircraft(String name, int payload, int rangeOfFlight, int fuel, int capacity) {
         this.payload = payload;
         this.rangeOfFlight = rangeOfFlight;
         this.fuel = fuel;
         this.name = name;
+        this.capacity = capacity;
     }
 
     public String getName() {
@@ -43,6 +45,14 @@ public abstract class Aircraft implements Comparable<Aircraft>{
 
     public void setFuel(int fuel) {
         this.fuel = fuel;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
     }
 
     @Override
