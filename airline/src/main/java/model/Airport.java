@@ -30,6 +30,6 @@ public class Airport {
         System.out.println(aircrafts);
     }
     public List<Aircraft> getAllAircrafts() {
-        return aircrafts;
+        return new ArrayList<>(aircrafts);
     }
 }
