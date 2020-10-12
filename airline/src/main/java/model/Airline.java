@@ -1,14 +1,13 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.ArrayList;
 
-public class Airport {
+public class Airline {
     private List<Aircraft> aircrafts;
     private String name;
-
-    public Airport(String name) {
+    public Airline(String name) {
         aircrafts = new ArrayList<>();
         this.name = name;
     }
@@ -38,10 +37,18 @@ public class Airport {
     public List<Aircraft> getAllAircrafts() {
         return new ArrayList<>(aircrafts);
     }
+
     public int getTotalPayload() {
         int total = 0;
         for (int i = 0; i < aircrafts.size(); i++) {
             total += aircrafts.get(i).getPayload();
+        }
+        return total;
+    }
+    public int getTotalCapacity() {
+        int total = 0;
+        for (int i = 0; i < aircrafts.size(); i++) {
+            total += aircrafts.get(i).getCapacity();
         }
         return total;
     }
