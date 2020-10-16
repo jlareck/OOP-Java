@@ -2,6 +2,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
 public class ClassInfo {
+
     private String path;
     private Class loadedClass;
 
@@ -11,7 +12,7 @@ public class ClassInfo {
         this.loadedClass = classLoader.findClass(path);
     }
     public void printInfo() {
-        System.out.println("Class from: " + path);
+        System.out.println("Class from: " + loadedClass.getPackage().getName());
         System.out.println("Class name: " + loadedClass.getName());
         printPackageInfo();
         printClassType();
@@ -21,7 +22,7 @@ public class ClassInfo {
     private void printFields() {
         Field[] fields = loadedClass.getDeclaredFields();
         if (fields.length == 0) {
-            System.out.println("There is no field in the class");
+            System.out.println("There is no fields in the class");
             return;
         }
         else {
