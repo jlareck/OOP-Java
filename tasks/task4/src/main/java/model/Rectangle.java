@@ -1,6 +1,6 @@
 package model;
 
-public class Rectangle extends Line  implements Figure{
+public class Rectangle implements Figure{
     private int width;
     public int height;
 }

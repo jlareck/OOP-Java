@@ -1,11 +1,10 @@
-import org.apache.log4j.LogManager;
+
+
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-import org.apache.log4j.xml.DOMConfigurator;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.IOException;
+
 import java.io.InputStream;
 
 public class CustomClassLoader extends ClassLoader {
@@ -18,7 +17,7 @@ public class CustomClassLoader extends ClassLoader {
     }
 
     private byte[] loadClassFromFile(String fileName)  {
-        PropertyConfigurator.configure("/Users/mykolamedynsky/Desktop/5semester/tasks/task4/src/main/resources/log4j.properties");
+      //  PropertyConfigurator.configure("/Users/mykolamedynsky/Desktop/5semester/tasks/task4/src/main/resources/log4j.properties");
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(
                 fileName.replace('.', File.separatorChar) + ".class");
         byte[] buffer;

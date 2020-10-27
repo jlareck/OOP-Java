@@ -1,4 +1,4 @@
-
+import model.Rectangle;
 
 public class Main {
 
@@ -6,7 +6,8 @@ public class Main {
         ClassInfo rec = new ClassInfo("model.Rectangle");
         rec.printInfo();
         System.out.println();
-        ClassInfo line = new ClassInfo("model.Figure");
-        line.printInfo();
+        //ClassInfo line = new ClassInfo("model.Figure");
+       // line.printInfo();
+     //   Rectangle r = new Rectangle();
     }
 }
